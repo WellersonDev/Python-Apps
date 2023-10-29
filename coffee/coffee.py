@@ -15,7 +15,13 @@ print('')
 lista = list()
 items = dict()
 qtd = 0
-items["item"] = input('O que vai pedir?(ID): ')
+items["item"] = input('O que vai pedir?(ID): ').strip()
+
+while True:
+    if items["item"] == '01' or items["item"] == '02' or items["item"] == '03' or items["item"] == '04' or items["item"] == '05' or items["item"] == '06' or items["item"] == '07' or items["item"] == '08' or items["item"] == '09' or items["item"] == '10' or items["item"] == '11':
+        break
+    else:
+        items["item"] = input('O que vai pedir?(ID): ').strip()
 
 while True:
 
@@ -89,6 +95,12 @@ while True:
         pergunta = input('Deseja pedir algo mais?[SIM/NÃO]: ').strip().upper()[0]
         if pergunta == 'S':
             items['item'] = input('O que vai pedir?(ID): ').strip()
+
+            while True:
+                if items["item"] == '01' or items["item"] == '02' or items["item"] == '03' or items["item"] == '04' or items["item"] == '05' or items["item"] == '06' or items["item"] == '07' or items["item"] == '08' or items["item"] == '09' or items["item"] == '10' or items["item"] == '11':
+                    break
+                else:
+                    items["item"] = input('O que vai pedir?(ID): ').strip()
         else:
             break
 
